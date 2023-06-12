@@ -5,7 +5,6 @@ import requests
 import plotly.express as px
 from plotly.subplots import make_subplots
 from scipy.stats import f_oneway
-from decimal import Decimal
 
 
 
@@ -15,8 +14,6 @@ def run():
     st.subheader('Analisis Perbandingan Bahan Bakar Regular Gasoline, Premium Gasoline, Diesel and Ethanol')
     st.write('by :  [Muhammad Julizar](https://www.linkedin.com/in/muhammadjulizar/)')
     st.caption('E-mail : muhammadjulizar1@gmail.com')
-
-
     # Read Data
     df = pd.read_csv('https://raw.githubusercontent.com/muhammadjulz/Emmisions-CO2/main/CO2_emissions_clean.csv')
 
@@ -173,12 +170,13 @@ def run():
 
         # Menampilkan hasil
         st.write('Hasil Uji ANOVA:')
+        from decimal import Decimal
 
         p_value_formatted = format(Decimal(p_value), '0.2e')
         st.write('P-value:', p_value_formatted)
 
         st.write(r'''Telah dilakukan Hipotesis Testing dengan menggunakan pengujian statistik ANOVA, untuk melihat apakah terdapat perbedaan yang signifikan Emisi karbon dioksida (CO2) yang dihasilkan pada setiap jenis bahan bakar (bensin\_regular, bensin\_premium, diesel dan etanol).
-        Hasil dari uji ANOVA menunjukkan bahwa nilai p-value yang diperoleh sangat kecil ($8.858 \times 10^{-124}$). Karena nilai p-value lebih kecil dari tingkat signifikansi yang telah ditentukan (biasanya $\alpha = 0.05$),
+        Hasil dari uji ANOVA menunjukkan bahwa nilai p-value yang diperoleh sangat kecil ($1.112 \times 10^{-124}$). Karena nilai p-value lebih kecil dari tingkat signifikansi yang telah ditentukan (biasanya $\alpha = 0.05$),
         kita dapat menolak hipotesis nol (tidak ada perbedaan signifikan) sehingga dapat disimpulkan bahwa terdapat perbedaan signifikan dalam emisi CO2 antara jenis bahan bakar yang diuji dan Ethanol merupakan bahan bakar yang paling banyak menyumbang emisi gas karbon dioksida(CO2).''')
 
 
