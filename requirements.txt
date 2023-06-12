@@ -1,0 +1,9 @@
+streamlit
+pandas
+Image
+requests
+plotly.express
+make_subplots
+joblib
+f_oneway
+Decimal
