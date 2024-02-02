@@ -35,7 +35,7 @@ def run():
     st.header('\n')
 
     st.header('Dataset CO2 Emissions')
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(df)
     st.caption("Data Source: The data has been taken and compiled from the [Canada Goverment](https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64#wb-auto-6) official link ")
     st.header('\n')
 
