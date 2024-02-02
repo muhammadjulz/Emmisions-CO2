@@ -16,7 +16,6 @@ def run():
     st.caption('E-mail : muhammadjulizar1@gmail.com')
     # Read Data
     df = pd.read_csv('https://raw.githubusercontent.com/muhammadjulz/Emmisions-CO2/main/CO2_emissions_clean.csv')
-    df = df.drop(df.columns[1], axis=1, inplace=True)
     
     image = Image.open(requests.get('https://www.frost.com/wp-content/uploads/2022/06/GettyImages-1294597903-1.jpg', stream=True).raw)
     left_co, cent_co,last_co = st.columns(3)
